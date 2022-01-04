@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Timer.css";
 
 const Timer = () => {
-  const date = new Date(2022, 0, 10);
+  const date = new Date(2022, 0, 31);
 
   const updateTime = () => Math.floor((date - new Date()) / 1000);
 
