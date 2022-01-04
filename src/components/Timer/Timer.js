@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Timer.css";
 
 const Timer = () => {
   const date = new Date(2022, 0, 10);
@@ -14,22 +15,30 @@ const Timer = () => {
   const countMinutes = Math.floor((valueOfTimer % 3600) / 60);
   const countSeconds = Math.floor(valueOfTimer % 60);
   return (
-    <div>
+    <div className="timer-container">
       <div>
-        <div>{countDays < 10 ? "0" + countDays : countDays}</div>
-        <p>Days</p>
+        <div className="number">
+          {countDays < 10 ? "0" + countDays : countDays}
+        </div>
+        <p className="title">Days</p>
       </div>
       <div>
-        <div>{countHours < 10 ? "0" + countHours : countHours}</div>
-        <p>Hours</p>
+        <div className="number">
+          {countHours < 10 ? "0" + countHours : countHours}
+        </div>
+        <p className="title">Hours</p>
       </div>
       <div>
-        <div>{countMinutes < 10 ? "0" + countMinutes : countMinutes}</div>
-        <p>Minutes</p>
+        <div className="number">
+          {countMinutes < 10 ? "0" + countMinutes : countMinutes}
+        </div>
+        <p className="title">Minutes</p>
       </div>
       <div>
-        <div>{countSeconds < 10 ? "0" + countSeconds : countSeconds}</div>
-        <p>Seconds</p>
+        <div className="number">
+          {countSeconds < 10 ? "0" + countSeconds : countSeconds}
+        </div>
+        <p className="title">Seconds</p>
       </div>
     </div>
   );
